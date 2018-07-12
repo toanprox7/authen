@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Makes "field" required and between 2 and 6 characters long.</title>
+    <!--<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">-->
+
+</head>
+<body>
+<form id="myform" method="post" action="index.html">
+    <!--<label>Required, minimum length 2, maximum length 6: </label>-->
+    <input type="text" class="left" name="user">
+    <br/>
+    <input type="submit" value="Validate!">
+</form>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script>
+    // just for the demos, avoids form submit
+    $( "#myform" ).validate({
+        rules: {
+            user: {
+                required: true,
+                rangelength: [2, 6]
+            }
+        },
+        messages:{
+            user:{
+                required:"userame khong duoc de trong",
+                rangelength:"nhat it nhat tu 2 den 6 ky tu"
+            }
+        }
+    });
+</script>
+</body>
+</html>
