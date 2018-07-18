@@ -32,12 +32,12 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-            <form class="login100-form validate-form" method="post">
+            <form class="login100-form" id="sendMailForm" method="post">
 					<span class="login100-form-title p-b-33">
                         Your Email
 					</span>
 
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: abcxyz@example.com">
+                <div class="wrap-input100>
                     <input class="input100" type="email" name="email" placeholder="Email">
                     <span class="focus-input100-1"></span>
                     <span class="focus-input100-2"></span>
@@ -53,6 +53,29 @@
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script>
+    // just for the demos, avoids form submit
+    $( "#sendMailForm" ).validate({
+        rules: {
+            email: {
+                required: true,
+                rangelength:[8,50],
+		email:true    
+            }
+            
+        },
+        messages:{
+            email:{
+                required:"ban khong duoc de trong",
+                rangelength:"email duoc gioi han 8-50 ky tu",
+		email:"email ban nhap khong khop"					    
+            }
+        }
+    });
+</script>
 
 
 <!--===============================================================================================-->
