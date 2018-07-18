@@ -3,9 +3,9 @@
     "port": 3000
   },
   "postgre":{
-    "database":"depfmisrv0mifk",
-    "username":"opzjaoiiybegju",
-    "password":"bd03e65d91499130246208b888f0dfa88039df276dd6624c52e7a0893c9afacd",
+    "database":"db4np76m4rj0n2",
+    "username":"fcxctktjmxxtdj",
+    "password":"9ce4a0d0579f74d3c6fd9ea94985b382fa4de715c0caa1ce1ac1d85767c4852c",
     "port":5432
   }
 }
